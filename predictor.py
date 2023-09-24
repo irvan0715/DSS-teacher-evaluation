@@ -6,6 +6,7 @@ import pandas as pd
 import tensorflow as tf
 from sklearn.preprocessing import MinMaxScaler
 
+#membuat class predictor untuk memuat model dan scaler serta reduksi data
 class Predictor:
   def __init__(self):
     self.model: tf.keras.Model | None = None
