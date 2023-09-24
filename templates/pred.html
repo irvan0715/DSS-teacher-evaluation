@@ -1,0 +1,1126 @@
+{% extends 'layout.html' %}
+{% block content %}
+
+<!-- Begin Page Content -->
+<div class="container-fluid mt-3">
+
+    <!-- Page Heading -->
+    <h1 class="h3 mb-4 text-gray-800">Halaman Penilaian</h1>
+    <form action="{{ url_for('predict') }}" method="post">
+        <!-- Card Pedagogik -->
+        <div class="card shadow mb-4">
+            <!-- Card Header - Accordion -->
+            <a href="#collapseCardPedagogik" class="d-block card-header py-3" data-toggle="collapse" role="button"
+                aria-expanded="true" aria-controls="collapseCardPedagogik">
+                <h6 class="m-0 font-weight-bold text-success">Pedagogik</h6>
+            </a>
+            <!-- Card Content - Collapse -->
+            <div class="collapse" id="collapseCardPedagogik">
+                <div class="card-body">
+
+                    <!-- Q1 -->
+                    <div class="row">
+                        <div class="col-lg-6 border-left-warning mb-3">
+                            <p>1. Guru dapat mengidentifikasi karateristik belajar setiap peserta didik di kelasnya</p>
+                        </div>
+                        <div class="col-lg-6 mb-3">
+                            <div class="form-group">
+                                <input type="number" min="0" max="2" step="1" name="Q1"
+                                    class="form-control bg-gray-300 border-0 small col-lg-6 text-center">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Q2 -->
+                    <div class="row">
+                        <div class="col-lg-6 border-left-warning mb-3">
+                            <p>2. Guru memastikan bahwa semua peserta didik mendapatkan kesempatan
+                                yang sama untuk
+                                berpartisipasi aktif dalam kegiatan pembelajaran</p>
+                        </div>
+                        <div class="col-lg-6 mb-3">
+                            <div class="form-group">
+                                <input type="number" min="0" max="2" step="1" name="Q2"
+                                    class="form-control bg-gray-300 border-0 small col-lg-6 text-center">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Q3 -->
+                    <div class="row">
+                        <div class="col-lg-6 border-left-warning mb-3">
+                            <p>3. Guru dapat mengatur kelas untuk memberikan kesempatan belajar yang sama kepada semua
+                                peserta didik dengan kelainan fisik dan kemampuan belajar yang berbeda</p>
+                        </div>
+                        <div class="col-lg-6 mb-3">
+                            <div class="form-group">
+                                <input type="number" min="0" max="2" step="1" name="Q3"
+                                    class="form-control bg-gray-300 border-0 small col-lg-6 text-center">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Q4 -->
+                    <div class="row">
+                        <div class="col-lg-6 border-left-warning mb-3">
+                            <p>4. Guru mencoba mengetahui penyebab penyimpangan perilaku peserta
+                                didik untuk mencegah
+                                agar perilaku tersebut tidak merugikan peserta didik lainnya</p>
+                        </div>
+                        <div class="col-lg-6 mb-3">
+                            <div class="form-group">
+                                <input type="number" min="0" max="2" step="1" name="Q4"
+                                    class="form-control bg-gray-300 border-0 small col-lg-6 text-center">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Q5 -->
+                    <div class="row">
+                        <div class="col-lg-6 border-left-warning mb-3">
+                            <p>5. Guru membantu mengembangkan potensi dan mengatasi kekurangan peserta didik</p>
+                        </div>
+                        <div class="col-lg-6 mb-3">
+                            <div class="form-group">
+                                <input type="number" min="0" max="2" step="1" name="Q5"
+                                    class="form-control bg-gray-300 border-0 small col-lg-6 text-center">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Q6 -->
+                    <div class="row">
+                        <div class="col-lg-6 border-left-warning mb-3">
+                            <p>6. Guru memperhatikan peserta didik dengan kelemahan fisik tertentu
+                                agar dapat mengikuti
+                                aktivitas pembelajaran, sehingga peserta didik tersebut tidak termaginalkan
+                                (tersisihkan, diolok – olok, minder, dsb.)</p>
+                        </div>
+                        <div class="col-lg-6 mb-3">
+                            <div class="form-group">
+                                <input type="number" min="0" max="2" step="1" name="Q6"
+                                    class="form-control bg-gray-300 border-0 small col-lg-6 text-center">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Q7 -->
+                    <div class="row">
+                        <div class="col-lg-6 border-left-warning mb-3">
+                            <p>7. Guru memberi kesempatan kepada peserta didik untuk menguasai materi pembelajaran
+                                sesuai usia dan kemampuan belajarnya melalui pengaturan proses pembelajaran dan
+                                aktivitas yang bervariasi</p>
+                        </div>
+                        <div class="col-lg-6 mb-3">
+                            <div class="form-group">
+                                <input type="number" min="0" max="2" step="1" name="Q7"
+                                    class="form-control bg-gray-300 border-0 small col-lg-6 text-center">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Q8 -->
+                    <div class="row">
+                        <div class="col-lg-6 border-left-warning mb-3">
+                            <p>8. Guru selalu memastikan tingkat pemahaman peserta didik terhadap
+                                materi pembelajaran
+                                tertentu dan menyesuaikan aktivitas pembelajaran berikutnya berdasarkan tingkat
+                                pemahaman tersebut</p>
+                        </div>
+                        <div class="col-lg-6 mb-3">
+                            <div class="form-group">
+                                <input type="number" min="0" max="2" step="1" name="Q8"
+                                    class="form-control bg-gray-300 border-0 small col-lg-6 text-center">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Q9 -->
+                    <div class="row">
+                        <div class="col-lg-6 border-left-warning mb-3">
+                            <p>9. Guru dapat menjelaskan alasan pelaksanaan kegiatan/aktivitas yang dilakukannya, baik
+                                yang sesuai maupun yang berbeda dengan rencana, terkait keberhasilan pembelajaran</p>
+                        </div>
+                        <div class="col-lg-6 mb-3">
+                            <div class="form-group">
+                                <input type="number" min="0" max="2" step="1" name="Q9"
+                                    class="form-control bg-gray-300 border-0 small col-lg-6 text-center">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Q10 -->
+                    <div class="row">
+                        <div class="col-lg-6 border-left-warning mb-3">
+                            <p">10. Guru menggunakan berbagai Teknik untuk memotivasi kemauan belajar
+                                peserta didik</p>
+                        </div>
+                        <div class="col-lg-6 mb-3">
+                            <div class="form-group">
+                                <input type="number" min="0" max="2" step="1" name="Q10"
+                                    class="form-control bg-gray-300 border-0 small col-lg-6 text-center">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Q11 -->
+                    <div class="row">
+                        <div class="col-lg-6 border-left-warning mb-3">
+                            <p>11. Guru merencanakan kegiatan pembelajaran yang saling terkait satu sama lain, dengan
+                                memperhatikan tujuan pembelajaran maupun proses belajar peserta didik</p>
+                        </div>
+                        <div class="col-lg-6 mb-3">
+                            <div class="form-group">
+                                <input type="number" min="0" max="2" step="1" name="Q11"
+                                    class="form-control bg-gray-300 border-0 small col-lg-6 text-center">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Q12 -->
+                    <div class="row">
+                        <div class="col-lg-6 border-left-warning mb-3">
+                            <p>12. Guru memperhatikan respon peserta didik yang belum/kurang memahami pembelajaran yang
+                                diajarkan dan menggunakannya untuk memperbaiki rancangan pembelajaran berikutnya</p>
+                        </div>
+                        <div class="col-lg-6 mb-3">
+                            <div class="form-group">
+                                <input type="number" min="0" max="2" step="1" name="Q12"
+                                    class="form-control bg-gray-300 border-0 small col-lg-6 text-center">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Q13 -->
+                    <div class="row">
+                        <div class="col-lg-6 border-left-warning mb-3">
+                            <p>13. Guru dapat menyusun/menggunakan silabus yang sesuai dengan kurikulum</p>
+                        </div>
+                        <div class="col-lg-6 mb-3">
+                            <div class="form-group">
+                                <input type="number" min="0" max="2" step="1" name="Q13"
+                                    class="form-control bg-gray-300 border-0 small col-lg-6 text-center">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Q14 -->
+                    <div class="row">
+                        <div class="col-lg-6 border-left-warning mb-3">
+                            <p>14. Guru merancang rencana pembelajaran yang sesuai dengan silabus</p>
+                        </div>
+                        <div class="col-lg-6 mb-3">
+                            <div class="form-group">
+                                <input type="number" min="0" max="2" step="1" name="Q14"
+                                    class="form-control bg-gray-300 border-0 small col-lg-6 text-center">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Q15 -->
+                    <div class="row">
+                        <div class="col-lg-6 border-left-warning mb-3">
+                            <p>15. Guru mengembangkan materi pembelajaran untuk mencapai kompetensi dasar</p>
+                        </div>
+                        <div class="col-lg-6 mb-3">
+                            <div class="form-group">
+                                <input type="number" min="0" max="2" step="1" name="Q15"
+                                    class="form-control bg-gray-300 border-0 small col-lg-6 text-center">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Q16 -->
+                    <div class="row">
+                        <div class="col-lg-6 border-left-warning mb-3">
+                            <p>16. Guru mengikuti urutan materi pembelajaran dengan memperhatikan tujuan pembelajaran
+                            </p>
+                        </div>
+                        <div class="col-lg-6 mb-3">
+                            <div class="form-group">
+                                <input type="number" min="0" max="2" step="1" name="Q16"
+                                    class="form-control bg-gray-300 border-0 small col-lg-6 text-center">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Q17 -->
+                    <div class="row">
+                        <div class="col-lg-6 border-left-warning mb-3">
+                            <p>17. Guru memilih materi pembelajaran yang:<br />
+                                a. Sesuai dengan tujuan pembelajaran<br />
+                                b. Tepat dan mutakhir<br />
+                                c. Sesuai dengan usia dan tingkat kemampuan belajar peserta didik<br />
+                                d. Dapat dilaksanakan di kelas<br />
+                                e. Sesuai dengan konteks kehidupan sehari – hari peserta didik<br />
+                            </p>
+                        </div>
+                        <div class="col-lg-6 mb-3">
+                            <div class="form-group">
+                                <input type="number" min="0" max="2" step="1" name="Q17"
+                                    class="form-control bg-gray-300 border-0 small col-lg-6 text-center">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Q18 -->
+                    <div class="row">
+                        <div class="col-lg-6 border-left-warning mb-3">
+                            <p>18. Guru melaksanakan aktivitas pembelajaran sesuai dengan rancangan yang telah disusun
+                                secara lengkap dan pelaksanaan aktivitas tersebut mengindikasikan bahwa guru mengerti
+                                tentang tujuannya</p>
+                        </div>
+                        <div class="col-lg-6 mb-3">
+                            <div class="form-group">
+                                <input type="number" min="0" max="2" step="1" name="Q18"
+                                    class="form-control bg-gray-300 border-0 small col-lg-6 text-center">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Q19 -->
+                    <div class="row">
+                        <div class="col-lg-6 border-left-warning mb-3">
+                            <p>19. Guru melaksanakan aktivitas pembelajaran yang bertujuan untuk membantu proses belajar
+                                peserta didik, bukan untuk menguji sehingga membuat peserta didik merasa tertekan</p>
+                        </div>
+                        <div class="col-lg-6 mb-3">
+                            <div class="form-group">
+                                <input type="number" min="0" max="2" step="1" name="Q19"
+                                    class="form-control bg-gray-300 border-0 small col-lg-6 text-center">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Q20 -->
+                    <div class="row">
+                        <div class="col-lg-6 border-left-warning mb-3">
+                            <p>20. Guru menginformasikan informasi baru (misalnya materi tambahan) sesuai dengan usia
+                                dan tingkat kemampuan belajar peserta didik</p>
+                        </div>
+                        <div class="col-lg-6 mb-3">
+                            <div class="form-group">
+                                <input type="number" min="0" max="2" step="1" name="Q20"
+                                    class="form-control bg-gray-300 border-0 small col-lg-6 text-center">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Q21 -->
+                    <div class="row">
+                        <div class="col-lg-6 border-left-warning mb-3">
+                            <p>21. Guru menyikapi kesalahan yang dilakukan peserta didik sebagai tahapan proses
+                                pembelajaran, bukan semata – mata kesalahan yang harus dikoreksi</p>
+                        </div>
+                        <div class="col-lg-6 mb-3">
+                            <div class="form-group">
+                                <input type="number" min="0" max="2" step="1" name="Q21"
+                                    class="form-control bg-gray-300 border-0 small col-lg-6 text-center">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Q22 -->
+                    <div class="row">
+                        <div class="col-lg-6 border-left-warning mb-3">
+                            <p>22. Guru melaksanakan kegiatan pembelajaran sesuai isi kurikulum dan mengkaitkannya
+                                dengan konteks kehidupan sehari – hari peserta didik</p>
+                        </div>
+                        <div class="col-lg-6 mb-3">
+                            <div class="form-group">
+                                <input type="number" min="0" max="2" step="1" name="Q22"
+                                    class="form-control bg-gray-300 border-0 small col-lg-6 text-center">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Q23 -->
+                    <div class="row">
+                        <div class="col-lg-6 border-left-warning mb-3">
+                            <p>23. Guru melakukan aktivitas pembelajaran secara bervariasi dengan waktu yang cukup untuk
+                                kegiatan pembelajaran yang sesuai dengan usia dan tingkat kemampuan peserta didik dan
+                                mempertahankan perhatian peserta didik</p>
+                        </div>
+                        <div class="col-lg-6 mb-3">
+                            <div class="form-group">
+                                <input type="number" min="0" max="2" step="1" name="Q23"
+                                    class="form-control bg-gray-300 border-0 small col-lg-6 text-center">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Q24 -->
+                    <div class="row">
+                        <div class="col-lg-6 border-left-warning mb-3">
+                            <p>24. Guru mengelola kelas dengan efektif tanpa mendominasi atau sibuk dengan kegiatannya
+                                sendiri agar semua waktu peserta dapat dimanfaatkan secara produktif</p>
+                        </div>
+                        <div class="col-lg-6 mb-3">
+                            <div class="form-group">
+                                <input type="number" min="0" max="2" step="1" name="Q24"
+                                    class="form-control bg-gray-300 border-0 small col-lg-6 text-center">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Q25 -->
+                    <div class="row">
+                        <div class="col-lg-6 border-left-warning mb-3">
+                            <p>25. Guru mampu menyesuaikan aktivitas pembelajaran yang dirancang dengan kondisi kelas
+                            </p>
+                        </div>
+                        <div class="col-lg-6 mb-3">
+                            <div class="form-group">
+                                <input type="number" min="0" max="2" step="1" name="Q25"
+                                    class="form-control bg-gray-300 border-0 small col-lg-6 text-center">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Q26 -->
+                    <div class="row">
+                        <div class="col-lg-6 border-left-warning mb-3">
+                            <p>26. Guru memberikan banyak kesempatan kepada peserta didik untuk bertanya, mempraktikan
+                                dan berinteraksi dengan peserta didik lain</p>
+                        </div>
+                        <div class="col-lg-6 mb-3">
+                            <div class="form-group">
+                                <input type="number" min="0" max="2" step="1" name="Q26"
+                                    class="form-control bg-gray-300 border-0 small col-lg-6 text-center">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Q27 -->
+                    <div class="row">
+                        <div class="col-lg-6 border-left-warning mb-3">
+                            <p>27. Guru mengatur pelaksanaan aktivitas pembelajaran secara sistematis untuk membatu
+                                proses belajar peserta didik</p>
+                        </div>
+                        <div class="col-lg-6 mb-3">
+                            <div class="form-group">
+                                <input type="number" min="0" max="2" step="1" name="Q27"
+                                    class="form-control bg-gray-300 border-0 small col-lg-6 text-center">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Q28 -->
+                    <div class="row">
+                        <div class="col-lg-6 border-left-warning mb-3">
+                            <p>28. Guru menggunakan alat bantu mengajar, dan/atau audio-visual (termasuk TIK) untuk
+                                meningkatkan motivasi belajar peserta didik dalam mencapai tujuan pembelajaran</p>
+                        </div>
+                        <div class="col-lg-6 mb-3">
+                            <div class="form-group">
+                                <input type="number" min="0" max="2" step="1" name="Q28"
+                                    class="form-control bg-gray-300 border-0 small col-lg-6 text-center">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Q29 -->
+                    <div class="row">
+                        <div class="col-lg-6 border-left-warning mb-3">
+                            <p>29. Guru menganalisa hasil belajar berdasarkan segala bentuk penilaian terhadap setiap
+                                peserta didik untuk mengetahui tingkat kemajuan masing – masing</p>
+                        </div>
+                        <div class="col-lg-6 mb-3">
+                            <div class="form-group">
+                                <input type="number" min="0" max="2" step="1" name="Q29"
+                                    class="form-control bg-gray-300 border-0 small col-lg-6 text-center">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Q30 -->
+                    <div class="row">
+                        <div class="col-lg-6 border-left-warning mb-3">
+                            <p>30. Guru merancang dan melaksanakan aktivitas pembelajaran yang mendorong peserta didik
+                                untuk belajar sesuai dengan kecakapan dan pola belajar masing – masing</p>
+                        </div>
+                        <div class="col-lg-6 mb-3">
+                            <div class="form-group">
+                                <input type="number" min="0" max="2" step="1" name="Q30"
+                                    class="form-control bg-gray-300 border-0 small col-lg-6 text-center">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Q31 -->
+                    <div class="row">
+                        <div class="col-lg-6 border-left-warning mb-3">
+                            <p>31. Guru merancang dan melaksanakan aktivitas pembelajaran untuk memunculkan daya
+                                kreativitas dan kemampuan berfikir kritis peserta didik</p>
+                        </div>
+                        <div class="col-lg-6 mb-3">
+                            <div class="form-group">
+                                <input type="number" min="0" max="2" step="1" name="Q31"
+                                    class="form-control bg-gray-300 border-0 small col-lg-6 text-center">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Q32 -->
+                    <div class="row">
+                        <div class="col-lg-6 border-left-warning mb-3">
+                            <p>32. Guru secara aktif membantu peserta didik dalam proses pembelajaran dengan memberikan
+                                perhatian kepada setiap individu</p>
+                        </div>
+                        <div class="col-lg-6 mb-3">
+                            <div class="form-group">
+                                <input type="number" min="0" max="2" step="1" name="Q32"
+                                    class="form-control bg-gray-300 border-0 small col-lg-6 text-center">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Q33 -->
+                    <div class="row">
+                        <div class="col-lg-6 border-left-warning mb-3">
+                            <p>33. Guru dapat mengidentifikasi dengan benar tentang bakat, minat, potensi dan kesulitan
+                                belajar masing – masing peserta didik</p>
+                        </div>
+                        <div class="col-lg-6 mb-3">
+                            <div class="form-group">
+                                <input type="number" min="0" max="2" step="1" name="Q33"
+                                    class="form-control bg-gray-300 border-0 small col-lg-6 text-center">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Q34 -->
+                    <div class="row">
+                        <div class="col-lg-6 border-left-warning mb-3">
+                            <p>34. Guru memberikan kesempatan belajar kepada peserta didik sesuai dengan cara belajarnya
+                                masing – masing</p>
+                        </div>
+                        <div class="col-lg-6 mb-3">
+                            <div class="form-group">
+                                <input type="number" min="0" max="2" step="1" name="Q34"
+                                    class="form-control bg-gray-300 border-0 small col-lg-6 text-center">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Q35 -->
+                    <div class="row">
+                        <div class="col-lg-6 border-left-warning mb-3">
+                            <p>35. Guru memusatkan perhatian pada interaksi dengan peserta didik dan mendorongnya untuk
+                                memahami dan menggunakan informasi yang disampaikannya</p>
+                        </div>
+                        <div class="col-lg-6 mb-3">
+                            <div class="form-group">
+                                <input type="number" min="0" max="2" step="1" name="Q35"
+                                    class="form-control bg-gray-300 border-0 small col-lg-6 text-center">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Q36 -->
+                    <div class="row">
+                        <div class="col-lg-6 border-left-warning mb-3">
+                            <p>36. Guru menggunakan pertanyaan untuk mengetahui pemahaman dan menjaga partisipasi
+                                peserta didik, termasuk memberikan pertanyaan terbuka yang menuntut peserta didik untuk
+                                menjawab dengan ide dan pengetahuan mereka</p>
+                        </div>
+                        <div class="col-lg-6 mb-3">
+                            <div class="form-group">
+                                <input type="number" min="0" max="2" step="1" name="Q36"
+                                    class="form-control bg-gray-300 border-0 small col-lg-6 text-center">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Q37 -->
+                    <div class="row">
+                        <div class="col-lg-6 border-left-warning mb-3">
+                            <p>37. Guru memberikan perhatian dan mendengarkan semua pertanyaan dan tanggapan peserta
+                                didik, tanpa menginterupsi, kecuali juka diperlukan untuk membantu atau mengklarifikasi
+                                pertanyaan/tanggapan tersebut</p>
+                        </div>
+                        <div class="col-lg-6 mb-3">
+                            <div class="form-group">
+                                <input type="number" min="0" max="2" step="1" name="Q37"
+                                    class="form-control bg-gray-300 border-0 small col-lg-6 text-center">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Q38 -->
+                    <div class="row">
+                        <div class="col-lg-6 border-left-warning mb-3">
+                            <p>38. Guru menanggapi pertanyaan peserta didik secara tepat, benar dan mutakhir, sesuai
+                                tujuan pembelajaran dan isi kurikulum, tanpa mempermalukannya</p>
+                        </div>
+                        <div class="col-lg-6 mb-3">
+                            <div class="form-group">
+                                <input type="number" min="0" max="2" step="1" name="Q38"
+                                    class="form-control bg-gray-300 border-0 small col-lg-6 text-center">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Q39 -->
+                    <div class="row">
+                        <div class="col-lg-6 border-left-warning mb-3">
+                            <p>39. Guru menyajikan kegiatan pembelajaran yang dapat menumbuhkan kerja sama yang bai
+                                kantar peserta didik</p>
+                        </div>
+                        <div class="col-lg-6 mb-3">
+                            <div class="form-group">
+                                <input type="number" min="0" max="2" step="1" name="Q39"
+                                    class="form-control bg-gray-300 border-0 small col-lg-6 text-center">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Q40 -->
+                    <div class="row">
+                        <div class="col-lg-6 border-left-warning mb-3">
+                            <p>40. Guru mendengarkan dan memberikan perhatian terhadap semua jawaban peserta didik baik
+                                yang benar maupun yang dianggap salahuntuk mengukur tingkat pemahaman peserta didik</p>
+                        </div>
+                        <div class="col-lg-6 mb-3">
+                            <div class="form-group">
+                                <input type="number" min="0" max="2" step="1" name="Q40"
+                                    class="form-control bg-gray-300 border-0 small col-lg-6 text-center">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Q41 -->
+                    <div class="row">
+                        <div class="col-lg-6 border-left-warning mb-3">
+                            <p>41. Guru memberikan perhatian terhadap pertanyaan peserta didik dan meresponnya secara
+                                lengkap dan relevan untuk menghilangkan kebingungan pada peserta didik</p>
+                        </div>
+                        <div class="col-lg-6 mb-3">
+                            <div class="form-group">
+                                <input type="number" min="0" max="2" step="1" name="Q41"
+                                    class="form-control bg-gray-300 border-0 small col-lg-6 text-center">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Q42 -->
+                    <div class="row">
+                        <div class="col-lg-6 border-left-warning mb-3">
+                            <p>42. Guru Menyusun alat penilaian yang sesuai dengan tujuan pembelajaran untuk mencapai
+                                kompetensi tertentu seperti tertulis dalam RPP</p>
+                        </div>
+                        <div class="col-lg-6 mb-3">
+                            <div class="form-group">
+                                <input type="number" min="0" max="2" step="1" name="Q42"
+                                    class="form-control bg-gray-300 border-0 small col-lg-6 text-center">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Q43 -->
+                    <div class="row">
+                        <div class="col-lg-6 border-left-warning mb-3">
+                            <p>43. Guru melaksanakan penilaian dengan berbagai teknik dan jenis penilaian, selain
+                                penilaian formal yang dilaksanakan sekolah dan mengumumkan hasil serta implikasinya
+                                kepada peserta didik, tentang tingkat pemahaman terhadap materi pembelajaran yang telah
+                                dan akan dipelajari</p>
+                        </div>
+                        <div class="col-lg-6 mb-3">
+                            <div class="form-group">
+                                <input type="number" min="0" max="2" step="1" name="Q43"
+                                    class="form-control bg-gray-300 border-0 small col-lg-6 text-center">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Q44 -->
+                    <div class="row">
+                        <div class="col-lg-6 border-left-warning mb-3">
+                            <p>44. Guru menganalisis hasil penilaian untuk mengidentifikasi topik/kompetensi dasar yang
+                                sulit sehingga diketahui kekuatan dan kelemahan masing – masing peserta didik untuk
+                                keperluan remedial dan pengayaan</p>
+                        </div>
+                        <div class="col-lg-6 mb-3">
+                            <div class="form-group">
+                                <input type="number" min="0" max="2" step="1" name="Q44"
+                                    class="form-control bg-gray-300 border-0 small col-lg-6 text-center">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Q45 -->
+                    <div class="row">
+                        <div class="col-lg-6 border-left-warning mb-3">
+                            <p>45. Guru memanfaatkan masukan dari peserta didik dan merefleksikannya untuk meningkatkan
+                                pembelajaran selanjutnya, dan dapat membuktikannya melalui catatan, jurnal pembelajaran,
+                                rancangan pembelajaran, materi tambahan, dsb.</p>
+                        </div>
+                        <div class="col-lg-6 mb-3">
+                            <div class="form-group">
+                                <input type="number" min="0" max="2" step="1" name="Q45"
+                                    class="form-control bg-gray-300 border-0 small col-lg-6 text-center">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Q46 -->
+                    <div class="row">
+                        <div class="col-lg-6 border-left-warning mb-3">
+                            <p>46. Guru memanfaatkan hasil penilaian sebagai bahan penyusunan rancangan pembelajaran
+                                yang akan dilakukan selanjutnya</p>
+                        </div>
+                        <div class="col-lg-6 mb-3">
+                            <div class="form-group">
+                                <input type="number" min="0" max="2" step="1" name="Q46"
+                                    class="form-control bg-gray-300 border-0 small col-lg-6 text-center">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- Card Kepribadian -->
+        <div class="card shadow mb-4">
+            <!-- Card Header - Accordion -->
+            <a href="#collapseCardKepribadian" class="d-block card-header py-3" data-toggle="collapse" role="button"
+                aria-expanded="true" aria-controls="collapseCardKepribadian">
+                <h6 class="m-0 font-weight-bold text-success">Kepribadian</h6>
+            </a>
+            <!-- Card Content - Collapse -->
+            <div class="collapse" id="collapseCardKepribadian">
+                <div class="card-body">
+                    <!-- Q47 -->
+                    <div class="row">
+                        <div class="col-lg-6 border-left-warning mb-3">
+                            <p>47. Guru menghargai dan mempromosikan prinsip – prinsip Pancasila sebagai dasar ideologi
+                                dan etika bagi semua warga Indonesia</p>
+                        </div>
+                        <div class="col-lg-6 mb-3">
+                            <div class="form-group">
+                                <input type="number" min="0" max="2" step="1" name="Q47"
+                                    class="form-control bg-gray-300 border-0 small col-lg-6 text-center">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Q48 -->
+                    <div class="row">
+                        <div class="col-lg-6 border-left-warning mb-3">
+                            <p>48. Guru mengembangkan kerja sama dan membina kebersamaan dengan teman sejawat tanpa
+                                memperhatikan perbedaan yang ada (suku, agama, gender, dsb.)</p>
+                        </div>
+                        <div class="col-lg-6 mb-3">
+                            <div class="form-group">
+                                <input type="number" min="0" max="2" step="1" name="Q48"
+                                    class="form-control bg-gray-300 border-0 small col-lg-6 text-center">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Q49 -->
+                    <div class="row">
+                        <div class="col-lg-6 border-left-warning mb-3">
+                            <p>49. Guru saling menghormati dan menghargai teman sejawat sesuai dengan kondisi dan
+                                keberadaan masing – masing</p>
+                        </div>
+                        <div class="col-lg-6 mb-3">
+                            <div class="form-group">
+                                <input type="number" min="0" max="2" step="1" name="Q49"
+                                    class="form-control bg-gray-300 border-0 small col-lg-6 text-center">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Q50 -->
+                    <div class="row">
+                        <div class="col-lg-6 border-left-warning mb-3">
+                            <p>50. Guru memiliki rasa persatuan dan kesatuan sebagai bangsa Indonesia</p>
+                        </div>
+                        <div class="col-lg-6 mb-3">
+                            <div class="form-group">
+                                <input type="number" min="0" max="2" step="1" name="Q50"
+                                    class="form-control bg-gray-300 border-0 small col-lg-6 text-center">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Q51 -->
+                    <div class="row">
+                        <div class="col-lg-6 border-left-warning mb-3">
+                            <p>51. Guru mempunyai pandangan yang luas tentang keberagaman suku bangsa Indonesia (budaya,
+                                suku, agama, dsb.)</p>
+                        </div>
+                        <div class="col-lg-6 mb-3">
+                            <div class="form-group">
+                                <input type="number" min="0" max="2" step="1" name="Q51"
+                                    class="form-control bg-gray-300 border-0 small col-lg-6 text-center">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Q52 -->
+                    <div class="row">
+                        <div class="col-lg-6 border-left-warning mb-3">
+                            <p>52. Guru bertingkah laku santun dalam berbicara, berpenampilan sopan, terhadap semua
+                                peserta didik, orang tua dan teman sejawat</p>
+                        </div>
+                        <div class="col-lg-6 mb-3">
+                            <div class="form-group">
+                                <input type="number" min="0" max="2" step="1" name="Q52"
+                                    class="form-control bg-gray-300 border-0 small col-lg-6 text-center">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Q53 -->
+                    <div class="row">
+                        <div class="col-lg-6 border-left-warning mb-3">
+                            <p>53. Guru mau membagi pengalamannya dengan kolega, termasuk mengundang mereka untuk
+                                mengobservasi cara mengajarnya dan memberikan masukan</p>
+                        </div>
+                        <div class="col-lg-6 mb-3">
+                            <div class="form-group">
+                                <input type="number" min="0" max="2" step="1" name="Q53"
+                                    class="form-control bg-gray-300 border-0 small col-lg-6 text-center">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Q54 -->
+                    <div class="row">
+                        <div class="col-lg-6 border-left-warning mb-3">
+                            <p>54. Guru mampu mengelola pembelajaran yang membuktikan bahwa guru dihormati oleh peserta
+                                didik, sehingga semua peserta didik selalu memperhatikan guru dan berpartisipasi aktif
+                                dalam proses pembelajaran</p>
+                        </div>
+                        <div class="col-lg-6 mb-3">
+                            <div class="form-group">
+                                <input type="number" min="0" max="2" step="1" name="Q54"
+                                    class="form-control bg-gray-300 border-0 small col-lg-6 text-center">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Q55 -->
+                    <div class="row">
+                        <div class="col-lg-6 border-left-warning mb-3">
+                            <p>55. Guru bersikap dewasa dalam menerima masukan dari peserta didik</p>
+                        </div>
+                        <div class="col-lg-6 mb-3">
+                            <div class="form-group">
+                                <input type="number" min="0" max="2" step="1" name="Q55"
+                                    class="form-control bg-gray-300 border-0 small col-lg-6 text-center">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Q56 -->
+                    <div class="row">
+                        <div class="col-lg-6 border-left-warning mb-3">
+                            <p>56. Guru berperilaku baik untuk mencitrakan nama baik sekolah</p>
+                        </div>
+                        <div class="col-lg-6 mb-3">
+                            <div class="form-group">
+                                <input type="number" min="0" max="2" step="1" name="Q56"
+                                    class="form-control bg-gray-300 border-0 small col-lg-6 text-center">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Q57 -->
+                    <div class="row">
+                        <div class="col-lg-6 border-left-warning mb-3">
+                            <p>57. Guru mengawali dan mengakhiri pembelajaran dengan tepat waktu</p>
+                        </div>
+                        <div class="col-lg-6 mb-3">
+                            <div class="form-group">
+                                <input type="number" min="0" max="2" step="1" name="Q57"
+                                    class="form-control bg-gray-300 border-0 small col-lg-6 text-center">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Q58 -->
+                    <div class="row">
+                        <div class="col-lg-6 border-left-warning mb-3">
+                            <p>58. Jika guru harus meninggalkan kelas, guru mengaktifkan siswa dengan melakukan hal –
+                                hal produktif terkait dengan mata pelajaran, dan meminta guru piket atau guru lain untuk
+                                mengawasi kelas</p>
+                        </div>
+                        <div class="col-lg-6 mb-3">
+                            <div class="form-group">
+                                <input type="number" min="0" max="2" step="1" name="Q58"
+                                    class="form-control bg-gray-300 border-0 small col-lg-6 text-center">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Q59 -->
+                    <div class="row">
+                        <div class="col-lg-6 border-left-warning mb-3">
+                            <p>59. Guru memenuhi jam mengajar dan dapat melakukan semua kegiatan lain diluar jam
+                                mengajar berdasarkan izin dan persetujuan pengelola sekolah</p>
+                        </div>
+                        <div class="col-lg-6 mb-3">
+                            <div class="form-group">
+                                <input type="number" min="0" max="2" step="1" name="Q59"
+                                    class="form-control bg-gray-300 border-0 small col-lg-6 text-center">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Q60 -->
+                    <div class="row">
+                        <div class="col-lg-6 border-left-warning mb-3">
+                            <p>60. Guru meminta izin dan memberitahu lebih awal, dengan memberikan alasan dan bukti yang
+                                sah jika tidak menghadiri kegiatan yang telah direncanakan, termasuk kegiatan
+                                pembelajaran di kelas</p>
+                        </div>
+                        <div class="col-lg-6 mb-3">
+                            <div class="form-group">
+                                <input type="number" min="0" max="2" step="1" name="Q60"
+                                    class="form-control bg-gray-300 border-0 small col-lg-6 text-center">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Q61 -->
+                    <div class="row">
+                        <div class="col-lg-6 border-left-warning mb-3">
+                            <p>61. Guru menyelesaikan semua tugas administratif dan non-pembelajaran dengan tepat waktu
+                                sesuai standar yang ditetapkan</p>
+                        </div>
+                        <div class="col-lg-6 mb-3">
+                            <div class="form-group">
+                                <input type="number" min="0" max="2" step="1" name="Q61"
+                                    class="form-control bg-gray-300 border-0 small col-lg-6 text-center">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Q62 -->
+                    <div class="row">
+                        <div class="col-lg-6 border-left-warning mb-3">
+                            <p>62. Guru memanfaatkan waktu luang selain mengajar untuk kegiatan produktif terkait dengan
+                                tugasnya</p>
+                        </div>
+                        <div class="col-lg-6 mb-3">
+                            <div class="form-group">
+                                <input type="number" min="0" max="2" step="1" name="Q62"
+                                    class="form-control bg-gray-300 border-0 small col-lg-6 text-center">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Q63 -->
+                    <div class="row">
+                        <div class="col-lg-6 border-left-warning mb-3">
+                            <p>63. Guru memberikan kontribusi terhadap pengembangan sekolah dan mempunyai prestasi yang
+                                berdampak positif terhadap nama baik sekolah</p>
+                        </div>
+                        <div class="col-lg-6 mb-3">
+                            <div class="form-group">
+                                <input type="number" min="0" max="2" step="1" name="Q63"
+                                    class="form-control bg-gray-300 border-0 small col-lg-6 text-center">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Q64 -->
+                    <div class="row">
+                        <div class="col-lg-6 border-left-warning mb-3">
+                            <p>64. Guru merasa bangga dengan profesinya</p>
+                        </div>
+                        <div class="col-lg-6 mb-3">
+                            <div class="form-group">
+                                <input type="number" min="0" max="2" step="1" name="Q64"
+                                    class="form-control bg-gray-300 border-0 small col-lg-6 text-center">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Card Sosial -->
+        <div class="card shadow mb-4">
+            <!-- Card Header - Accordion -->
+            <a href="#collapseCardSosial" class="d-block card-header py-3" data-toggle="collapse" role="button"
+                aria-expanded="true" aria-controls="collapseCardSosial">
+                <h6 class="m-0 font-weight-bold text-success">Sosial</h6>
+            </a>
+            <!-- Card Content - Collapse -->
+            <div class="collapse" id="collapseCardSosial">
+                <div class="card-body">
+                    <!-- Q65 -->
+                    <div class="row">
+                        <div class="col-lg-6 border-left-warning mb-3">
+                            <p>65. Guru memperlakukan semua peserta didik secara adil, memberikan perhatian dan bantuan
+                                sesuai kebutuhan masing – masing, tanpa memperdulikan faktor personal</p>
+                        </div>
+                        <div class="col-lg-6 mb-3">
+                            <div class="form-group">
+                                <input type="number" min="0" max="2" step="1" name="Q65"
+                                    class="form-control bg-gray-300 border-0 small col-lg-6 text-center">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Q66 -->
+                    <div class="row">
+                        <div class="col-lg-6 border-left-warning mb-3">
+                            <p>66. Guru menjaga hubungan baik dan peduli dengan teman sejawat (bersifat inklusif), serta
+                                berkontribusi positif terhadap semua diskusi formal dan informal terkait dengan
+                                pekerjaannya</p>
+                        </div>
+                        <div class="col-lg-6 mb-3">
+                            <div class="form-group">
+                                <input type="number" min="0" max="2" step="1" name="Q66"
+                                    class="form-control bg-gray-300 border-0 small col-lg-6 text-center">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Q67 -->
+                    <div class="row">
+                        <div class="col-lg-6 border-left-warning mb-3">
+                            <p>67. Guru sering berinteraksi dengan peserta didik dan tidak membatasi perhatiannya hanya
+                                pada kelompok tertentu (peserta didik pandai, kaya, serumpun)</p>
+                        </div>
+                        <div class="col-lg-6 mb-3">
+                            <div class="form-group">
+                                <input type="number" min="0" max="2" step="1" name="Q67"
+                                    class="form-control bg-gray-300 border-0 small col-lg-6 text-center">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Q68 -->
+                    <div class="row">
+                        <div class="col-lg-6 border-left-warning mb-3">
+                            <p>68. Guru menyampaikan informasi tentang kemajuan, kesulitan dan potensi peserta didik
+                                kepada orang tuanya, baik dalam pertemuan formal maupun tidak formal antara guru dan
+                                orang tua, teman sejawat, dan menunjukkan buktinya</p>
+                        </div>
+                        <div class="col-lg-6 mb-3">
+                            <div class="form-group">
+                                <input type="number" min="0" max="2" step="1" name="Q68"
+                                    class="form-control bg-gray-300 border-0 small col-lg-6 text-center">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Q69 -->
+                    <div class="row">
+                        <div class="col-lg-6 border-left-warning mb-3">
+                            <p>69. Guru ikut berperan aktif dalam kegiatan diluar pembelajaran yang diselenggarakan oleh
+                                sekolah dan masyarakat dan dapat memberikan bukti keikutsertaannya</p>
+                        </div>
+                        <div class="col-lg-6 mb-3">
+                            <div class="form-group">
+                                <input type="number" min="0" max="2" step="1" name="Q69"
+                                    class="form-control bg-gray-300 border-0 small col-lg-6 text-center">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Q70 -->
+                    <div class="row">
+                        <div class="col-lg-6 border-left-warning mb-3">
+                            <p>70. Guru memperhatikan sekolah sebagai bagian dari masyarakat, berkomunikasi dengan
+                                masyarakat sekita, serta berperan dalam kegiatan sosial di masyarakat</p>
+                        </div>
+                        <div class="col-lg-6 mb-3">
+                            <div class="form-group">
+                                <input type="number" min="0" max="2" step="1" name="Q70"
+                                    class="form-control bg-gray-300 border-0 small col-lg-6 text-center">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Card Profesional -->
+        <div class="card shadow mb-4">
+            <!-- Card Header - Accordion -->
+            <a href="#collapseCardProfesional" class="d-block card-header py-3" data-toggle="collapse" role="button"
+                aria-expanded="true" aria-controls="collapseCardProfesional">
+                <h6 class="m-0 font-weight-bold text-success">Profesional</h6>
+            </a>
+            <!-- Card Content - Collapse -->
+            <div class="collapse" id="collapseCardProfesional">
+                <div class="card-body">
+                    <!-- Q71 -->
+                    <div class="row">
+                        <div class="col-lg-6 border-left-warning mb-3">
+                            <p>71. Guru melakukan pemetaan standar kompetensi/kompetensi inti dan kompetensi dasar untuk
+                                mata pelajaran yang diampunya, untuk mengidentifikasi materi pembelajaran yang dianggap
+                                sulit, melakukan perencanaan dan pelaksanaan pembelajaran, dan memperkirakan alokasi
+                                waktu
+                                yang diperlukan</p>
+                        </div>
+                        <div class="col-lg-6 mb-3">
+                            <div class="form-group">
+                                <input type="number" min="0" max="2" step="1" name="Q71"
+                                    class="form-control bg-gray-300 border-0 small col-lg-6 text-center">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Q72 -->
+                    <div class="row">
+                        <div class="col-lg-6 border-left-warning mb-3">
+                            <p>72. Guru menyertakan informasi yang tepat dan mutakhir di dalam perencanaan dan
+                                pelaksanaan
+                                pembelajaran</p>
+                        </div>
+                        <div class="col-lg-6 mb-3">
+                            <div class="form-group">
+                                <input type="number" min="0" max="2" step="1" name="Q72"
+                                    class="form-control bg-gray-300 border-0 small col-lg-6 text-center">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Q73 -->
+                    <div class="row">
+                        <div class="col-lg-6 border-left-warning mb-3">
+                            <p>73. Guru Menyusun materi, perencanaan dan pelaksanaan pembelajaran yang berisi informasi
+                                yang
+                                tepat, mutakhir dan membantu peserta didik memahami konsep materi pembelajaran</p>
+                        </div>
+                        <div class="col-lg-6 mb-3">
+                            <div class="form-group">
+                                <input type="number" min="0" max="2" step="1" name="Q73"
+                                    class="form-control bg-gray-300 border-0 small col-lg-6 text-center">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Q74 -->
+                    <div class="row">
+                        <div class="col-lg-6 border-left-warning mb-3">
+                            <p>74. Guru melakukan evaluasi diri secara spesifik, lengkap dan didukung dengan contoh
+                                pengalaman diri sendiri</p>
+                        </div>
+                        <div class="col-lg-6 mb-3">
+                            <div class="form-group">
+                                <input type="number" min="0" max="2" step="1" name="Q74"
+                                    class="form-control bg-gray-300 border-0 small col-lg-6 text-center">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Q75 -->
+                    <div class="row">
+                        <div class="col-lg-6 border-left-warning mb-3">
+                            <p>75. Guru memiliki jurnal pembelajaran, catatan masukan dari kolega atau hasil penilaian
+                                proses pembelajaran sebagai bukti yang menggambarkan kinerjanya</p>
+                        </div>
+                        <div class="col-lg-6 mb-3">
+                            <div class="form-group">
+                                <input type="number" min="0" max="2" step="1" name="Q75"
+                                    class="form-control bg-gray-300 border-0 small col-lg-6 text-center">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Q76 -->
+                    <div class="row">
+                        <div class="col-lg-6 border-left-warning mb-3">
+                            <p>76. Guru memanfaatkan bukti gambaran kinerjanya untuk mengembangkan perencanaan dan
+                                pelaksanaan pembelajaran selanjutnya dalam program PKB</p>
+                        </div>
+                        <div class="col-lg-6 mb-3">
+                            <div class="form-group">
+                                <input type="number" min="0" max="2" step="1" name="Q76"
+                                    class="form-control bg-gray-300 border-0 small col-lg-6 text-center">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Q77 -->
+                    <div class="row">
+                        <div class="col-lg-6 border-left-warning mb-3">
+                            <p>77. Guru dapat mengaplikasikan pengalaman pengembangan keprofesian berkelanjutan dalam
+                                perencanaan, pelaksanaan, penilaian pembelajaran dan tindak lanjutnya</p>
+                        </div>
+                        <div class="col-lg-6 mb-3">
+                            <div class="form-group">
+                                <input type="number" min="0" max="2" step="1" name="Q77"
+                                    class="form-control bg-gray-300 border-0 small col-lg-6 text-center">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Q78 -->
+                    <div class="row">
+                        <div class="col-lg-6 border-left-warning mb-3">
+                            <p>78. Guru melakukan penelitian, mengembangkan karya inovasi, mengikuti kegiatan ilmiah
+                                (seminar, konferensi, workshop), dan aktif dalam melaksanakan PKB</p>
+                        </div>
+                        <div class="col-lg-6 mb-3">
+                            <div class="form-group">
+                                <input type="number" min="0" max="2" step="1" name="Q78"
+                                    class="form-control bg-gray-300 border-0 small col-lg-6 text-center">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Q79 -->
+                    <div class="row">
+                        <div class="col-lg-6 border-left-warning mb-3">
+                            <p>79. Guru dapat memanfaatkan TIK dalam berkomunikasi dan pelaksanaan PKB</p>
+                        </div>
+                        <div class="col-lg-6 mb-3">
+                            <div class="form-group">
+                                <input type="number" min="0" max="2" step="1" name="Q79"
+                                    class="form-control bg-gray-300 border-0 small col-lg-6 text-center">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- submit -->
+        <div class="row">
+            <div class="col-lg-4"></div>
+            <div class="col-lg-4">
+                <input type="submit" class="btn btn-success btn-user btn-block border-bottom-warning"
+                    value="Kategorisasi">
+            </div>
+            <div class="col-lg-4"></div>
+        </div>
+    </form>
+
+
+</div>
+<!-- /.container-fluid -->
+
+
+{% endblock %}

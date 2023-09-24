@@ -1,0 +1,50 @@
+{% extends 'layout.html' %}
+{% block content %}
+
+<!-- Begin Page Content -->
+<div class="container-fluid mt-3">
+
+    <!-- Page Heading -->
+    <h1 class="h3 mb-4 text-gray-800">Tentang Sistem</h1>
+
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="card shadow mb-4">
+                <!-- Card Header - Accordion -->
+                <a href="#collapseCardModel" class="d-block card-header py-3" data-toggle="collapse" role="button"
+                    aria-expanded="true" aria-controls="collapseCardModel">
+                    <h6 class="m-0 font-weight-bold text-success">Arsitektur Model</h6>
+                </a>
+                <!-- Card Content - Collapse -->
+                <div class="collapse" id="collapseCardModel">
+                    <div class="card-body">
+                        This is a collapsable card example using Bootstrap's built in collapse
+                        functionality. <strong>Click on the card header</strong> to see the card body
+                        collapse and expand!
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="card shadow mb-4">
+                <!-- Card Header - Accordion -->
+                <a href="#collapseCardAkurasi" class="d-block card-header py-3" data-toggle="collapse" role="button"
+                    aria-expanded="true" aria-controls="collapseCardAkurasi">
+                    <h6 class="m-0 font-weight-bold text-success">Akurasi Model</h6>
+                </a>
+                <!-- Card Content - Collapse -->
+                <div class="collapse" id="collapseCardAkurasi">
+                    <div class="card-body">
+                        This is a collapsable card example using Bootstrap's built in collapse
+                        functionality. <strong>Click on the card header</strong> to see the card body
+                        collapse and expand!
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!-- /.container-fluid -->
+
+{% endblock %}

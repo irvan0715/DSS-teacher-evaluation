@@ -1,0 +1,33 @@
+{% extends 'layout.html' %}
+{% block content %}
+
+<!-- Begin Page Content -->
+<div class="container-fluid mt-3">
+
+    <!-- Page Heading -->
+    <h1 class="h3 mb-4 text-gray-800">Selamat Datang</h1>
+
+
+    <p>
+        Panduan pengisian form penilaian kinerja guru: <br>
+        Isi nama guru yang akan dinilai, kemudian isi nilai pada setiap indikator yang ada. <br>
+        Nilai yang diberikan adalah nilai 0-2, dengan keterangan: <br>
+        0 = Tidak terpenuhi <br>
+        1 = Terpenuhi sebagian <br>
+        2 = Terpenuhi seluruhnya<br>
+        <br>
+        Setelah selesai mengisi, klik tombol <strong>"Kategorisasi"</strong> untuk mendapatkan hasil kategori
+        berdasarkan kinerja guru.
+        <br>
+        <br>
+        Hasil penilaian terbagi kedalam <strong>4 kategori</strong> sebagai berikut: <br>
+        1. Sangat Baik <br>
+        2. Baik <br>
+        3. Cukup <br>
+        4. Kurang <br>
+    </p>
+
+</div>
+<!-- /.container-fluid -->
+
+{% endblock %}

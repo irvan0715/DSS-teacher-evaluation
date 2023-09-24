@@ -1,0 +1,30 @@
+{% extends 'layout.html' %}
+{% block content %}
+
+<!-- Begin Page Content -->
+<div class="container-fluid mt-3">
+
+    <!-- Page Heading -->
+    <h1 class="h3 mb-4 text-gray-800">Hasil Penilaian</h1>
+
+    <!-- mengeluarkan hasil prediksi -->
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card shadow mb-4">
+                <!-- Card Header - Dropdown -->
+                <div class="card-header py-3 bg-success">
+                    <h6 class="m-0 font-weight-bold text-white">Hasil Prediksi</h6>
+                </div>
+                <!-- Card Body -->
+                <div class="card-body">
+                    <p class="text-center">Hasil prediksi kategorisasi guru berdasarkan kinerjanya masuk kedalam
+                        kategori <b>{{ prediction }}</b></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!-- /.container-fluid -->
+
+{% endblock %}
